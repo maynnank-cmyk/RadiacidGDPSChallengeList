@@ -1,1 +1,1 @@
-# RadiacidGDPSChallengeList
+# EternalGDPSDemonList
