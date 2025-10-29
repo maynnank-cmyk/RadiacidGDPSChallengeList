@@ -1,0 +1,22 @@
+{
+  "players": [
+    {
+      "id": "sosna",
+      "name": "Sosna",
+      "avatar": "S",
+      "completedDemons": ["sky"],
+      "progress": {
+        "sky": 100
+      }
+    },
+      {
+      "id": "robiks",
+      "name": "robiks",
+      "avatar": "R",
+      "completedDemons": ["dangerzone"],
+      "progress": {
+        "dangerzone": 100
+      }
+    }
+  ]
+}

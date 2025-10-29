@@ -1,0 +1,20 @@
+{
+  "demons": [
+    {
+      "id": "sky",
+      "name": "Sky",
+      "creator": "VladGMD",
+      "videoUrl": "https://www.youtube.com/watch?v=siIrEF2qLGo",
+      "image": "images/sky.png",
+      "description": "Первый платформер уровень на сервере."
+    },
+    {
+      "id": "dangerzone",
+      "name": "DangerZone",
+      "creator": "Robiks",
+      "videoUrl": "https://youtu.be/1FQPCUWpeCo?si=RS-sSO-bkdhtNaay",
+      "image": "images/dangerzone.png",
+      "description": "изи демон."
+    }
+  ]
+}
