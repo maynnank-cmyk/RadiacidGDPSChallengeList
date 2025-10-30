@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radiacid GDPS Challenge List</title>
+    <title>Топ Игроков - Radiacid GDPS</title>
     <style>
         :root {
             --bg-primary: #ffffff;
@@ -11,11 +11,11 @@
             --bg-tertiary: #e9ecef;
             --text-primary: #212529;
             --text-secondary: #6c757d;
-            --accent-blue: #0cb300;
+            --accent-blue: #0056b3;
             --accent-green: #28a745;
             --border-color: #dee2e6;
             --card-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            --header-blue: #1b702e;
+            --header-blue: #0056b3;
         }
         
         [data-theme="dark"] {
@@ -28,7 +28,7 @@
             --accent-green: #34c759;
             --border-color: #404040;
             --card-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            --header-blue: #1b702e;
+            --header-blue: #003d82;
         }
         
         * {
@@ -156,87 +156,8 @@
             font-weight: 600;
         }
         
-        /* Search Section */
-        .search-section {
-            padding: 2rem 0;
-            background: var(--bg-primary);
-        }
-        
-        .search-container {
-            max-width: 600px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .search-input {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            font-size: 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-        
-        .search-input:focus {
-            outline: none;
-            border-color: var(--accent-blue);
-            box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
-        }
-        
-        .search-results {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            margin-top: 0.5rem;
-            max-height: 300px;
-            overflow-y: auto;
-            z-index: 1000;
-            display: none;
-            box-shadow: var(--card-shadow);
-        }
-        
-        .search-result-item {
-            padding: 0.75rem 1rem;
-            cursor: pointer;
-            border-bottom: 1px solid var(--border-color);
-            transition: background-color 0.2s;
-        }
-        
-        .search-result-item:hover {
-            background-color: var(--bg-secondary);
-        }
-        
-        .search-result-item:last-child {
-            border-bottom: none;
-        }
-        
-        .search-result-name {
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-        
-        .search-result-creator {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            margin-top: 0.25rem;
-            font-weight: 600;
-        }
-        
-        .no-results {
-            padding: 1rem;
-            text-align: center;
-            color: var(--text-secondary);
-            font-weight: 600;
-        }
-        
-        /* Demon List */
-        .demon-list {
+        /* Players List */
+        .players-list {
             padding: 2rem 0;
         }
         
@@ -263,7 +184,7 @@
             gap: 1rem;
         }
         
-        .demon-row {
+        .player-row {
             background: var(--bg-primary);
             border: 1px solid var(--border-color);
             border-radius: 8px;
@@ -276,13 +197,13 @@
             box-shadow: var(--card-shadow);
         }
         
-        .demon-row:hover {
+        .player-row:hover {
             border-color: var(--accent-blue);
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             transform: translateY(-2px);
         }
         
-        .demon-rank {
+        .player-rank {
             font-size: 1.5rem;
             font-weight: 800;
             width: 60px;
@@ -302,26 +223,26 @@
             color: #cd7f32;
         }
         
-        .demon-image {
-            width: 240px;
-            height: 135px;
-            border-radius: 8px;
+        .player-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
             overflow: hidden;
             flex-shrink: 0;
             background: var(--bg-tertiary);
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid var(--border-color);
+            border: 3px solid var(--border-color);
         }
         
-        .demon-image img {
+        .player-avatar img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
         
-        .image-placeholder {
+        .avatar-placeholder {
             width: 100%;
             height: 100%;
             display: flex;
@@ -329,39 +250,39 @@
             justify-content: center;
             background: var(--bg-tertiary);
             color: var(--text-secondary);
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 800;
         }
         
-        .demon-info {
+        .player-info {
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
         
-        .demon-details {
+        .player-details {
             flex: 1;
         }
         
-        .demon-name {
+        .player-name {
             font-size: 1.5rem;
             font-weight: 800;
             color: var(--text-primary);
             margin-bottom: 0.5rem;
         }
         
-        .demon-creator {
+        .player-stats {
             color: var(--text-secondary);
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
         }
         
-        .demon-points {
+        .player-score {
             font-size: 1.25rem;
             font-weight: 800;
             color: var(--accent-green);
-            min-width: 100px;
+            min-width: 120px;
             text-align: right;
         }
         
@@ -381,7 +302,7 @@
         }
         
         .refresh-btn:hover {
-            background: #004d06;
+            background: #004494;
             transform: translateY(-1px);
         }
         
@@ -490,27 +411,26 @@
                 font-size: 2rem;
             }
             
-            .demon-row {
+            .player-row {
                 padding: 1rem;
                 gap: 1rem;
                 flex-direction: column;
                 text-align: center;
             }
             
-            .demon-image {
-                width: 100%;
-                max-width: 280px;
-                height: 157px;
+            .player-avatar {
+                width: 70px;
+                height: 70px;
             }
             
-            .demon-info {
+            .player-info {
                 flex-direction: column;
                 align-items: center;
                 gap: 0.5rem;
                 width: 100%;
             }
             
-            .demon-points {
+            .player-score {
                 text-align: center;
             }
             
@@ -537,9 +457,13 @@
                 justify-content: center;
             }
             
-            .demon-image {
-                width: 100%;
-                height: 140px;
+            .player-avatar {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .avatar-placeholder {
+                font-size: 1.2rem;
             }
             
             nav ul li a::after {
@@ -552,7 +476,7 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">RadiacidGDPS ChallengeList</a>
+                <a href="index.html" class="logo">RadiacidGDPS PlatformerList</a>
                 <div class="header-controls">
                     <button class="theme-toggle" onclick="toggleTheme()">
                         🌙
@@ -884,5 +808,4 @@
     </script>
 </body>
 </html>
-
 
